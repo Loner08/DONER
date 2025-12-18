@@ -1,0 +1,18 @@
+# Отключаем Jekyll обработку
+theme: null
+plugins: []
+
+# Отключаем обработку SCSS/SASS
+sass:
+  sass_dir: ""
+  
+# Отключаем обработку Markdown
+markdown: none
+
+# Разрешаем все файлы
+include:
+  - "*.html"
+  - "*.css"
+  - "*.js"
+  - "*.py"
+  - "static/**"
