@@ -1,18 +1,39 @@
-# Отключаем Jekyll обработку
-theme: null
+# Полностью отключаем Jekyll
+safe: true
+lsi: false
+incremental: false
+highlighter: null
+gist:
+  noscript: false
+kramdown:
+  math_engine: null
+  syntax_highlighter: null
+
+# Отключаем все плагины
 plugins: []
 
-# Отключаем обработку SCSS/SASS
+# Отключаем обработку CSS/SCSS
 sass:
-  sass_dir: ""
-  
-# Отключаем обработку Markdown
-markdown: none
+  load_paths: []
+  style: compressed
 
-# Разрешаем все файлы
+# Разрешаем ВСЕ файлы
 include:
-  - "*.html"
-  - "*.css"
-  - "*.js"
-  - "*.py"
-  - "static/**"
+  - "**/*"
+  - ".nojekyll"
+  
+# Запрещаем обработку
+exclude:
+  - "*.scss"
+  - "*.sass"
+  - "*.coffee"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules"
+  - "vendor/bundle/"
+  - "vendor/cache/"
+  - "vendor/gems/"
+  - "vendor/ruby/"
+
+# Устанавливаем пустую тему
+theme: null
